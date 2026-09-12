@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Solar2D / Corona SDK
+*.luagame
+*.apk
+*.aab
+*.app
+*.ipa
+.corona/
+*.tmp
+
+# Logs y builds
+*.log
+build/
