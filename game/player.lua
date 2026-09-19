@@ -1,0 +1,31 @@
+local Player = {}
+
+function Player.new()
+   local player = display.newRect(
+      display.contentCenterX,
+      display.contentCenterY,
+      40,
+      40
+   )
+
+   player.speed = 4
+
+   player.inputX = 0
+   player.inputY = 0
+
+   function player:setInput(x, y)
+      self.inputX = x
+      self.inputY = y
+   end
+
+   local function update()
+      player.x = player.x + player.inputX * player.speed
+      player.y = player.y + player.inputY * player.speed
+   end
+
+   Runtime:addEventListener("enterFrame", update)
+
+   return player
+end
+
+return Player
