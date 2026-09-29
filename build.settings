@@ -18,10 +18,12 @@ settings =
 	--
 	android =
 	{
+		minSdkVersion = "21",
 		usesPermissions =
 		{
 			"android.permission.INTERNET",
 		},
+		isGame = true,
 	},
 
 	--
@@ -33,7 +35,8 @@ settings =
 		plist =
 		{
 			UIStatusBarHidden = false,
-			UILaunchStoryboardName = "LaunchScreen",
+			MinimumOSVersion = "17.0",
+			--UILaunchStoryboardName = "LaunchScreen",
 		},
 	},
 
@@ -51,7 +54,13 @@ settings =
 	excludeFiles =
 	{
 		-- Exclude unnecessary files for each platform
-		all = { "Icon.png", "Icon-*dpi.png", "Images.xcassets", },
+		all = { ".git", ".gitignore", ".gitmodules","Icon.png", "Icon-*dpi.png", "Images.xcassets", },
 		android = { "LaunchScreen.storyboardc", },
+	},
+
+	splashScreen =
+	{
+		enable = true,
+		image = "presents.png",
 	},
 }
